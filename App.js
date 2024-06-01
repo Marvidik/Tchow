@@ -5,14 +5,14 @@ import RegisterScreen from './Screens/Authentication/RegisterScreen';
 import OTPScreen from './Screens/Authentication/OTPScreen';
 import ForgottenPasswordScreen from './Screens/Authentication/ForgottenPasswordScreen';
 import ChangePasswordScreen from './Screens/Authentication/ChangePasswordScreen';
+import HomeScreen from './Screens/ServiceScreens/HomeScreen';
 
 export default function App() {
 
-  // colors 3E09145   #FCD9B8
-  // #17181D  #292C35
+
   return (
     <View style={styles.container}>
-      <ChangePasswordScreen/>
+      <HomeScreen/>
       <StatusBar style="auto" />
     </View>
   );

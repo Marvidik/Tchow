@@ -19,7 +19,7 @@ export default function OTPScreen() {
     
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require('../../assets/flogo.jpeg')} />
+      <Image  style={styles.image} source={{uri:"https://img.freepik.com/free-vector/natural-fresh-label-sticker-badge_17005-903.jpg?size=626&ext=jpg&ga=GA1.2.2116053268.1717246517&semt=ais_user"}}/>
       <Text style={styles.text1}>OTP Request</Text>
       <View style={styles.box1}>
         <Text style={styles.text2}>4 digit code sent to </Text>
@@ -64,13 +64,13 @@ const styles = StyleSheet.create({
       },
       text1: {
         fontSize: 28,
-        color: '#E09145',
+        color: '#50C878',
         alignSelf: 'center',
         paddingTop: 20,
       },
       text2: {
         fontSize: 18,
-        color: 'grey',
+        color: '#32612D',
         marginBottom: 30,
       },
       box1: {
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         height: 50,
         width: 370,
         marginHorizontal: 20,
-        backgroundColor: '#E09145',
+        backgroundColor: '#50C878',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 5,

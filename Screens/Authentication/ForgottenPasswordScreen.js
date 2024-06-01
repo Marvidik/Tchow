@@ -6,7 +6,7 @@ import CustomButton from '../../Components/CustomButton'
 export default function ForgottenPasswordScreen() {
   return (
     <View>
-      <Image  style={styles.image} source={require("../../assets/flogo.jpeg")}/>
+      <Image  style={styles.image} source={{uri:"https://img.freepik.com/free-vector/natural-fresh-label-sticker-badge_17005-903.jpg?size=626&ext=jpg&ga=GA1.2.2116053268.1717246517&semt=ais_user"}}/>
       <View>
         <Text style={styles.logintext}>Login</Text>
         <Text style={styles.logintext1}>Enter the Email Address Associated  </Text>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         width:150,
         borderRadius:75,
         alignSelf:"center",
-        marginTop:30
+        marginTop:70
     },
     input:{
         height:60,
@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
     logintext:{
         fontSize:32,
         fontWeight:"700",
-        color:"#E09145",
+        color:"#50C878",
         alignSelf:"center",
         paddingTop:20
     },
     logintext1:{
         fontSize:18,
         fontWeight:"700",
-        color:"#17181D",
+        color:"#32612D",
         alignSelf:"center",
     },
     but:{
