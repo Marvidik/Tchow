@@ -2,6 +2,8 @@ import { View, Text,StyleSheet,Image } from 'react-native'
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'; // Import icons from Expo Icons library
 import IconComponent from '../../Components/IconComponent';
+import RestaurantCard from '../../Components/RestaurantCard';
+import TextInputWithIcons from '../../Components/TextInputWithIcons'
 
 export default function HomeScreen() {
   return (
@@ -11,7 +13,14 @@ export default function HomeScreen() {
             <Text style={styles.rest}>Home</Text>
             <IconComponent icon={"search-outline"} size={40} color={"#50C878"}/>
       </View>
-      {/* <Image style={styles.image} source={require("../../assets/green.jpeg")}/> */}
+      <Text style={styles.restaurants}>Restaurants</Text>   
+
+      <TextInputWithIcons placeholder={"search"} style={styles.input} leftIcon={"search"}/>
+
+      <RestaurantCard source={require("../../assets/menu (2).jpg")} location={"24b Ogbonna street aba "} logo={require("../../assets/flogo.jpeg")} company={"FoodComp"}/>
+      <RestaurantCard source={require("../../assets/menu (3).jpg")} location={"24b Ogbonna street aba "} logo={require("../../assets/flogo.jpeg")} company={"FoodComp"}/>
+      <RestaurantCard source={require("../../assets/menu (4).jpg")} location={"24b Ogbonna street aba "} logo={require("../../assets/flogo.jpeg")} company={"FoodComp"}/>
+      <RestaurantCard source={require("../../assets/menu (5).jpg")} location={"24b Ogbonna street aba "} logo={require("../../assets/flogo.jpeg")} company={"FoodComp"}/>
     </View>
   )
 }
@@ -19,7 +28,8 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
     container:{
-        paddingTop:44
+        paddingTop:44,
+        flex:1
     },
     box1:{
         marginHorizontal:20,
@@ -36,5 +46,16 @@ const styles = StyleSheet.create({
         width:350,
         alignSelf:"center",
         marginTop:20
-    }
+    },
+    restaurants:{
+      fontSize:28,
+      color:"#32612D",
+      marginLeft:20,
+      marginTop:10
+    },
+    input:{
+      height:60,
+      marginHorizontal:20,
+      marginTop:10
+  },
 })
