@@ -7,6 +7,8 @@ import ForgottenPasswordScreen from './Screens/Authentication/ForgottenPasswordS
 import ChangePasswordScreen from './Screens/Authentication/ChangePasswordScreen';
 import HomeScreen from './Screens/ServiceScreens/HomeScreen';
 import FoodScreen from './Screens/ServiceScreens/FoodScreen';
+import CartScreen from './Screens/ServiceScreens/CartScreen';
+import OrderScreen from './Screens/ServiceScreens/OrderScreen';
 
 export default function App() {
 

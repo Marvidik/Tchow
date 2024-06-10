@@ -3,17 +3,26 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import CustomButton from './CustomButton';
 
-const CartItem = ({ name,price,source,remove }) => {
-  
+const Carts = ({ item, onIncrement, onDecrement,remove }) => {
+  const imageUrl = `https://savvy.pythonanywhere.com${item.image}`;
 
   return (
     <View style={styles.container}>
-      <Image source={source} style={styles.image} />
+      <Image source={{ uri: imageUrl }} style={styles.image} />
       <View style={styles.details}>
-        <Text style={styles.name}>{name}</Text>
-        <Text style={styles.price}>₦{price}</Text>
+        <Text style={styles.name}>{item.name}</Text>
+        <Text style={styles.price}>₦{item.price.toFixed(2)}</Text>
+        <View style={styles.quantityContainer}>
+          <TouchableOpacity onPress={onDecrement} style={styles.quantityButton}>
+            <Text style={styles.quantityButtonText}>-</Text>
+          </TouchableOpacity>
+          <Text style={styles.quantity}>{item.quantity}</Text>
+          <TouchableOpacity onPress={onIncrement} style={styles.quantityButton}>
+            <Text style={styles.quantityButtonText}>+</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-      <CustomButton title={"Add"} icon={"cart"} onPress={remove}/>
+      <CustomButton title={"X"} icon={"trash"} onPress={remove}/>
     </View>
   );
 };
@@ -27,7 +36,6 @@ const styles = StyleSheet.create({
     borderBottomColor: '#ccc',
     paddingBottom: 20,
     paddingHorizontal:10,
-    marginTop:5
     
   },
   image: {
@@ -43,7 +51,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 5,
-    color:"#32612D"
+    color:"#512213"
   },
   price: {
     fontSize: 16,
@@ -75,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CartItem;
+export default Carts;
